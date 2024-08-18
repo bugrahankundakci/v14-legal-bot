@@ -1,0 +1,136 @@
+{
+    "botSettings": {
+        "token": "BOT TOKEN",
+        "ServerID": "SERVER'IN ID",
+        "clientID": "BOT ID",
+        "durum": "dnd",
+        "oynuyor": "BOT OYNUYOR"
+    },
+
+        "rol": {
+            "kayıtlı": "KAYITLI ROLÜ / EKİP ROLÜ",
+            "kayıtsız": "KAYITSIZ ROLÜ",
+            "inaktif": "İNAKTİF ROLÜ",
+            "yonetici": "YÖNETİCİ ROLÜ (ÇOĞU KOMUTU KULLANMAYA YETKİSİ VAR.)",
+            "ekip": ["ekip", "içerisindeki", "rolleri", "id'lerini gir"]
+        },
+
+
+        "kanal": {
+            "hatakanali": "hata atınca hangi kanala göndersin? id gir.",
+            "ozelodakategori": "ÖZEL ODALARIN AÇILACAĞI KATEGORİ",
+            "ozeloda": "HANGİ ODAYA GİRİNCE ÖZEL ODA AÇILSIJN İSTİYORSANIZ O KANALIN ID"
+        },
+
+        "leaderboard": {
+            "mesai": "MESAILERIN LEADERBOARD'INI HANGI CHAT KANALINA ATICAKSA O ID"
+        },
+
+
+
+
+        "ticket": {
+            "kategori": {
+                "ticketkategori": "ticketler hangi kategoride açılıcak?"
+            },
+            "yetkili": {
+                "ticket": "ticket yetkilisi rol id'si?"
+            },
+            "transcriptsChannelId": "ticket logları hangi kanala atılacak?",
+    
+            "menuayarlari": {
+                "mesaj": " 'Ticket Açmak İçin Aşağıdan Kategori Seçiniz. \n\n```Şikayetleriniz,\nÖneri/İstekleriniz,\nYaşadığınız sorunlar hakkında buradan yardım alabilirsin!``` \n\n> __Gereksiz Yere Ticket Açanlara İşlem Uygulanacaktır.__' ",
+                "menuplaceholder": " Ticket Açmak İçin Kategori Seçiniz.",
+                "birseceneklabel": "Destek, Bug & Teknik Sorunlar",
+                "birsecenekemoji": "1264482776208506971",
+                "birsecenekaciklama": "Destek için ticket oluştur!",
+                "ikiseceneklabel": "Oyun içi sorunlar, Rol hataları",
+                "ikisecenekemoji": "1264482774434320455",
+                "ikisecenekaciklama": "IC / OOC Sorunlar için ticket oluştur!",
+                "ucseceneklabel": "Başka Bir Sorun Belirt.",
+                "ucsecenekemoji": "1264482777739300874",
+                "ucsecenekaciklama": "Başka bir sorununu kendini ifade ederek belirt.",
+                "dortseceneklabel": "Diğer Kategoriler",
+                "dortsecenekemoji": "1264482782994890763",
+                "dortsecenekaciklama": "Deneme",
+                "icmesaj": " ```> Eğer video kaydınız yoksa bir görsele veya sizin anlatımınıza göre işlem yapılamaz. \n > **Video kayıtı zorunludur!** \n > **Sorununuzu direkt belirtiniz.** \n > Yetkililerimiz sizinle kısa süre içerisinde ilgilenicektir.``` "
+            },
+
+            "mesajlar": {
+                "katalog": "Hoşgeldiniz Bilgilendirme :  Ödeme Yöntemleri  \n - Papara \n - Bütün Bankacılıklar | iban \n__Yetkililerimi 15 20 Dakkika İçerisinde Döneceketir__  \n - 5 Dakika İçinde Müşteriden Cevap Gelmezse Ticket Kapancaktır \n Forma fiyatları:\n - 10 Adet 150 ₺  \n- 24 Adet 250 ₺ \n Bütün Hileler 200 ₺  \n Almayacaksanız Bilgilendirin Yoksa Ticket Kapatılır \n Welcome Information: Payment Methods \n Papara \n All Banking \n My Officials Will Return Within 15 20 Minutes \n If There Is No Response From The Customer Within 5 Minutes, The Ticket Will Be Closed"
+            }
+        },
+
+
+
+
+    "mesai": {
+        "ekip": {
+            "photograph": "https://pbs.twimg.com/media/EoCfpamXcAA2CdD.jpg:large"
+        },
+        "menuayarlari": {
+            "mesaj": " Alttaki menüden mesaiye girebilirsiniz. \n\n```Mesaiye girdikten 2 saat sonra kontrol için bildirim alacaksınız. ``` \n\n> __Mesai kontrolü başarısız olanlara yaptırım uygulanacaktır..__ ",
+            "menuplaceholder": " Mesai işlemleri için tıklayınız..",
+            "birseceneklabel": "Mesai'ye gir",
+            "birsecenekemoji": "1264482776208506971",
+            "birsecenekaciklama": "Mesaiye girmeniz için seçmeniz gereken seçenek.",
+            "ikiseceneklabel": "Mesai kontrol",
+            "ikisecenekemoji": "1264482774434320455",
+            "ikisecenekaciklama": "Mesai kontrol etmek için seçmeniz gereken seçenek.",
+            "ucseceneklabel": "Mesai çıkış",
+            "ucsecenekemoji": "1264482777739300874",
+            "ucsecenekaciklama": "mesaiden çıkmanız için seçmeniz gereken seçenek.",
+            "dortseceneklabel": "Tüm Mesailerim",
+            "dortsecenekemoji": "1264482782994890763",
+            "dortsecenekaciklama": "Şuan'a kadar yaptığınız tüm mesailer"
+        },
+
+        "yetkilimenuayarlari": {
+            "mesaj": " **Alttaki menüden memurları yönetebilirsiniz.** \n\n```Memurların her türlü kontrolünü buradan yapabilirsiniz.``` \n\n> __Yaptığınız şeyler kişilerin mesaisini etkiler.__ ",
+            "menuplaceholder": " Memurları Yönetmek için tıklayınız..",
+            "birseceneklabel": "Memuru Mesai'ye sok",
+            "birsecenekemoji": "1264482776208506971",
+            "birsecenekaciklama": "Memurları zorla mesaiye sokarsınız.",
+            "ikiseceneklabel": "Memur Mesai kontrol'ü",
+            "ikisecenekemoji": "1264482774434320455",
+            "ikisecenekaciklama": "Memurların mesailerini kontrol edersiniz.",
+            "ucseceneklabel": "Memur Mesaiden çıkart",
+            "ucsecenekemoji": "1264482777739300874",
+            "ucsecenekaciklama": "mesaiden çıkmanız için seçmeniz gereken seçenek.",
+            "dortseceneklabel": "Mesaideki memurları gör.",
+            "dortsecenekemoji": "1264482782994890763",
+            "dortsecenekaciklama": "Aktif mesaideki tüm memurları görüsünüz.",
+            "besseceneklabel": "Memurun tüm mesailerini gör.",
+            "bessecenekemoji": "1264482782994890763",
+            "bessecenekaciklama": "ID'sını girdiğiniz memurun tüm mesailerini görürsünüz."
+        }
+    },
+
+
+    "reklam": {
+        "minikprofillink": "https://discord.com/users/205638637080150016",
+        "minikdcid": "205638637080150016",
+        "minikisim": "Militan.",
+        "minikprofile": "https://cdn.discordapp.com/avatars/205638637080150016/a_53657df5c4797f31e2f7b61ef2f84374.gif?size=1024",
+        "fordevelopment": "ttps://discord.gg/1742",
+        "embedphoto": "https://media.discordapp.net/attachments/1238638628109025360/1243243537626038332/Adsz.png?ex=6650c445&is=664f72c5&hm=0ae4db728c7120438f0b4f3eb5c1b4da5520d268be3ea7a7ede93ecee9e183a7&=&format=webp&quality=lossless&width=1019&height=6"
+        },
+    
+    "basvuru": {
+        "birincisoru": "Kendinizi tanıtın",
+        "birincisoruplace": "isim - yaş - il",
+        "ikincisoru": "Aktiflik Süreniz",
+        "ikincisorusoruplace": "Gün içerisinde aktif olabildiğiniz süre?",
+        "ucuncusoru": "Legal Rol Bilgin",
+        "ucuncusoruplace": "Teste tabi tutulucaksınız. ona göre doldurun.",
+        "dorduncusoru": "Fivem Saatiniz ve oynadığınız sunucular",
+        "dorduncusoruplace": "Teste tabi tutulucaksınız. ona göre doldurun.",
+        "besincisoru": "Legal birimine katıldığınız sunucular",
+        "besincisoruplace": "Teste tabi tutulucaksınız. ona göre doldurun."
+    },
+
+    "log": {
+        "rolguncelleme": true
+    }
+
+ }

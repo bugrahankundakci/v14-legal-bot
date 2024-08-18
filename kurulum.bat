@@ -1,0 +1,3 @@
+title KURULUM BITENE KADAR PENCEREYI KAPATMA
+echo off
+npm i
