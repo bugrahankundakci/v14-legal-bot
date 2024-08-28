@@ -4,7 +4,7 @@ const moment = require('moment');
 const minik = require('../../minik.json');
 
 const db = new JsonDatabase({
-  databasePath: "./fordb.json"
+  databasePath: "/src/database/minik_database.json"
 });
 
 
