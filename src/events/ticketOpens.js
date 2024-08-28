@@ -33,7 +33,7 @@ module.exports = {
                     await interaction.reply({ content: `<@${interaction.user.id}> Ticketin açılıyor...`, ephemeral: true });
                     const destekticketi = await interaction.guild.channels.create({
                         type: ChannelType.GuildText,
-                        parent: minik.ticket.kategori,
+                        parent: minik.ticket.kategori.ticketkategori,
                         name: `${interaction.user.username}-ticket`,
                         permissionOverwrites: [
                             {
@@ -45,7 +45,7 @@ module.exports = {
                                 allow: [PermissionsBitField.Flags.ViewChannel],
                             },
                             {
-                                id: minik.ticket.yetkili,
+                                id: minik.ticket.yetkili.ticket,
                                 allow: [PermissionsBitField.Flags.ViewChannel],
                             },
                         ],
@@ -58,7 +58,7 @@ module.exports = {
                         .setTitle(`${interaction.user.username} - ${destekbugmesaj}`)
                         .setDescription(minik.ticket.menuayarlari.icmesaj);
                     await destekticketi.send({
-                        content: `<@${interaction.user.id}> - <@&${minik.ticket.yetkili}>`,
+                        content: `<@${interaction.user.id}> - <@&${minik.ticket.yetkili.ticket}>`,
                         embeds: [militaninticketegonderdigimesaj],
                         components: [actionRowMenu]
                     });
@@ -67,8 +67,8 @@ module.exports = {
                 case 'baskaproblems':
                     const baskaproblemticketi = await interaction.guild.channels.create({
                         type: ChannelType.GuildText,
-                        parent: minik.ticket.kategori,
-                        name: `${interaction.user.username}-ozel`,
+                        parent: minik.ticket.kategori.ticketkategori,
+                        name: `${interaction.user.username}-ticket`,
                         permissionOverwrites: [
                             {
                                 id: interaction.guild.roles.everyone.id,
@@ -79,7 +79,7 @@ module.exports = {
                                 allow: [PermissionsBitField.Flags.ViewChannel],
                             },
                             {
-                                id: minik.ticket.yetkili,
+                                id: minik.ticket.yetkili.ticket,
                                 allow: [PermissionsBitField.Flags.ViewChannel],
                             },
                         ],
@@ -92,7 +92,7 @@ module.exports = {
 
                     const changeNameInput = new TextInputBuilder()
                         .setCustomId('acikcasorun')
-                        .setLabel('Sorununu açık ve net bir şekilde belirt.')
+                        .setLabel('Problem ne?')
                         .setPlaceholder('Sorununu açık ve net bir şekilde belirt.')
                         .setStyle(TextInputStyle.Paragraph);
 
@@ -147,7 +147,7 @@ module.exports = {
 
 
                 await ticketChannel.send({
-                    content: `<@${interaction.user.id}> - <@&${minik.ticket.yetkili}>`,
+                    content: `<@${interaction.user.id}> - <@&${minik.ticket.yetkili.ticket}>`,
                     embeds: [militaninembedmessagesii],
                     components: [actionRowMenu]
                 });
