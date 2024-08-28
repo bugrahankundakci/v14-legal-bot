@@ -39,20 +39,6 @@ module.exports = {
                         value: "destekbug",
                     },
                     {
-                        label: minik.ticket.menuayarlari.ikiseceneklabel,
-                        emoji: minik.ticket.menuayarlari.ikisecenekemoji,
-                        description:
-                            minik.ticket.menuayarlari.ikisecenekaciklama,
-                        value: "icproblemler",
-                    },
-                    {
-                        label: minik.ticket.menuayarlari.dortseceneklabel,
-                        emoji: minik.ticket.menuayarlari.dortsecenekemoji,
-                        description:
-                            minik.ticket.menuayarlari.dortsecenekaciklama,
-                        value: "otherproblems",
-                    },
-                    {
                         label: minik.ticket.menuayarlari.ucseceneklabel,
                         emoji: minik.ticket.menuayarlari.ucsecenekemoji,
                         description:
