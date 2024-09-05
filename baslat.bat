@@ -1,3 +1,3 @@
+@echo off
 title allah
-echo off
 node minik.js
