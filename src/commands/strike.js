@@ -1,6 +1,5 @@
-const { SlashCommandBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const minik = require('../../minik.json');
-const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -10,11 +9,10 @@ module.exports = {
             option.setName('kişi')
                 .setDescription('kişi seçiniz.')
                 .setRequired(true))
-
-        .addStringOption(option => 
+        .addStringOption(option =>
             option.setName('sebep')
-            .setDescription(`strike yeme sebebi nedir?`)
-            .setRequired(true))
+                .setDescription(`strike yeme sebebi nedir?`)
+                .setRequired(true))
         .addStringOption(option =>
             option.setName('adet')
                 .setDescription('uyarı adeti giriniz.')
@@ -37,13 +35,12 @@ module.exports = {
         const sebep = interaction.options.getString('sebep');
 
         if (!member || !adet) {
-            return await interaction.channel.send({ content: `kullanıcı veya uyarı adeti bulunamadı.`, ephemeral: true });
+            return await interaction.reply({ content: `Kullanıcı veya uyarı adeti bulunamadı.`, ephemeral: true });
         }
-        
+
         const yetkili = interaction.member.roles.cache.some(r => minik.rol.yonetici.includes(r.id));
-        
         if (!yetkili) {
-            return await interaction.channel.send({ content: `Bu komutu kullanamazsın.`, ephemeral: true });
+            return await interaction.reply({ content: `Bu komutu kullanamazsın.`, ephemeral: true });
         }
 
         const roleNames = {
@@ -68,29 +65,31 @@ module.exports = {
 
         const minikinlogu = interaction.client.channels.cache.find(channel => channel.name === 'strike_log');
         const minikinembedi = new EmbedBuilder()
-        .setTitle(`${member.displayName} dosya`)
-        .setColor(`#b2ff88`)
-        .setAuthor({
-            name: interaction.guild.name,
-            iconURL: interaction.guild.iconURL({ dynamic: true }),
-        })
-        .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
-        .setDescription(`Personellerimizden birisi strike yedi. \n Yetkili: \n > <@${interaction.user.id}> \n Personel: \n > ${member} \n Strike sayısı: \n > **${roleName}** \n Sebep: \n > ${sebep}`)
-        .setFooter({
-            text: `${interaction.guild.name} top secret file.`,
-            iconURL: interaction.guild.iconURL({ dynamic: true }) // (Opsiyonel) Bir ikon URL'si
-        })
-        
-        .setImage(minik.mesai.ekip.photograph);
-
-            minikinlogu.send({ content: ``, embeds: [minikinembedi]})
+            .setTitle(`${member.displayName} dosya`)
+            .setColor(`#b2ff88`)
+            .setAuthor({
+                name: interaction.guild.name,
+                iconURL: interaction.guild.iconURL({ dynamic: true }),
+            })
+            .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
+            .setDescription(`Personellerimizden birisi strike yedi. \n Yetkili: \n > <@${interaction.user.id}> \n Personel: \n > ${member} \n Strike sayısı: \n > **${roleName}** \n Sebep: \n > ${sebep}`)
+            .setFooter({
+                text: `${interaction.guild.name} top secret file.`,
+                iconURL: interaction.guild.iconURL({ dynamic: true })
+            })
+            .setImage(minik.mesai.ekip.photograph);
 
         try {
             await member.roles.add(role);
-            await interaction.reply({ content: `Rol verildi: ${role.name}`, ephemeral: true });
+
+            if (minikinlogu) {
+                minikinlogu.send({ embeds: [minikinembedi] });
+            }
+
+            await interaction.reply({ content: `✅ ${member} kişisine **${role.name}** rolü verildi.`, ephemeral: true });
         } catch (error) {
-            console.error(error);
-            await interaction.reply({ content: `Rol verilirken bir hata oluştu.`, ephemeral: true });
+            console.error("Rol verme hatası:", error);
+            await interaction.reply({ content: `⚠️ Rol verilirken bir hata oluştu.`, ephemeral: true });
         }
     }
 };
