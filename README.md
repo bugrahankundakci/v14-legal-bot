@@ -6,7 +6,6 @@
 - **Mesai Yönetimi**: Çalışma saatlerinizi yönetmenizi sağlayan sistem.
 - **Özelleştirilebilir Mesajlar**: Mesajlarınızı kendi ihtiyaçlarınıza göre özelleştirin.
 - **Rol Bilgi Komutu**: Sunucudaki roller hakkında bilgi verir.
-- **Oto-Rol Sistemi**: Yeni üyelere otomatik olarak roller verir.
 - **Giriş-Çıkış Loglama**: Kullanıcıların giriş ve çıkışlarını kaydeder.
 - **Ticket Sistemi**: V14 ve menülü ticket sistemi ile destek taleplerini yönetir.
 - **Strike Sistemi**: Özel ve şık bir arayüz ile strike işlemlerini yönetir.
